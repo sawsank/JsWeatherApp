@@ -3,7 +3,7 @@ let lon, lat;
 let temperature = document.querySelector(".temp");
 let summary = document.querySelector(".summary");
 let loc = document.querySelector(".location");
-let icon = document.querySelector(".icon");
+//let icon = document.querySelector(".icon");
 const kelvin = 273;
 
 window.addEventListener("load", () => {
@@ -32,9 +32,9 @@ window.addEventListener("load", () => {
               Math.floor(data.main.temp - kelvin) + "°C";
           summary.textContent = data.weather[0].description;
           loc.textContent = data.name + "," + data.sys.country;
-          let icon1 = data.weather[0].icon;
-          icon.innerHTML = 
-              `<img src="icons/${icon1}.svg" style= 'height:10rem'/>`;
+         // let icon1 = data.weather[0].icon;
+         // icon.innerHTML = 
+              //`<img src="icons/${icon1}.svg" style= 'height:10rem'/>`;
         });
     });
   }
